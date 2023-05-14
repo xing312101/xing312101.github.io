@@ -18,7 +18,7 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
-  tutorialSidebar: [
+  japaneseSidebar: [
     'japanese',
     {
       type: 'category',
@@ -26,6 +26,7 @@ const sidebars = {
       items: ['words/word'],
     },
   ],
+
 
 };
 

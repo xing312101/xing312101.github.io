@@ -3,7 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const projectRepoUrl = 'https://github.com/xing312101/xing-japanese'
+const projectRepoUrl = 'https://github.com/xing312101/xing-life'
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -15,12 +15,12 @@ const config = {
   url: 'https://xing312101.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/xing-japanese/',
+  baseUrl: '/xing-life/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'xing312101', // Usually your GitHub org/user name.
-  projectName: 'xing-japanese', // Usually your repo name.
+  projectName: 'xing-life', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,7 +43,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
-          //   'https://github.com/xing312101/xing-japanese/tree/main/packages/create-docusaurus/templates/shared/',
+          //   'https://github.com/xing312101/xing-life/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -61,15 +61,15 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: "俞興的語言",
+        title: "俞興的生活",
         logo: {
-          alt: "YuXing's language",
+          alt: "YuXing's life",
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'japaneseSidebar',
             position: 'left',
             label: '日文筆記',
           },
