@@ -18,12 +18,25 @@ const sidebars = {
 
   // But you can create a sidebar manually
 
+  // englishSidebar: [
+  //   'english/english',
+  //   {
+  //     type: 'category',
+  //     label: 'ee單字/ee単語',
+  //     items: ['english/word'],
+  //   },
+  // ],
   japaneseSidebar: [
-    'japanese',
+    'japanese/japanese',
     {
       type: 'category',
       label: '單字/単語',
-      items: ['words/word'],
+      items: ['japanese/word'],
+    },
+    {
+      type: 'category',
+      label: '句子/文',
+      items: ['japanese/sentences/presentation'],
     },
   ],
 

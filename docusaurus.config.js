@@ -73,6 +73,12 @@ const config = {
             position: 'left',
             label: '日文筆記',
           },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'englishSidebar',
+          //   position: 'left',
+          //   label: '英文筆記',
+          // },
           {
             href: projectRepoUrl,
             label: 'GitHub',
