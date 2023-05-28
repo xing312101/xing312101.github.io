@@ -88,8 +88,12 @@ chikashitsu
 
 ```
 マイナスの意味が
-zaiakukan    ichibu
-罪悪感を持ってる一部の人
+
+zaiakukan
+罪悪感を持ってる
+
+ichibu
+一部の人
 ```
 
 ```
