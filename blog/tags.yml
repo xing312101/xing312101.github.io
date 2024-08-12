@@ -1,0 +1,21 @@
+Canada:
+  label: Canada
+  permalink: /Canada
+  description: Canada
+Vancouver:
+  label: Vancouver
+  permalink: /VancouverBC
+  description: Vancouver of British Columbia in Canada
+Taiwan:
+  label: Taiwan
+  permalink: /Taiwan
+  description: Taiwan
+Taipei:
+  label: Taipei
+  permalink: /Taipe
+  description: Taipei City
+Taoyuan:
+  label: Taoyuan
+  permalink: /Taoyuan
+  description: Taoyuan
+
