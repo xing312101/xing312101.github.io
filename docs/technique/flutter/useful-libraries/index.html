@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-technique/flutter/useful-libraries" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">useful-libraries | Xing312101&#x27;s Life Notes</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://xing312101.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://xing312101.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://xing312101.github.io/docs/technique/flutter/useful-libraries"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="useful-libraries | Xing312101&#x27;s Life Notes"><meta data-rh="true" name="description" content="https://dart.dev/guides/libraries/useful-libraries"><meta data-rh="true" property="og:description" content="https://dart.dev/guides/libraries/useful-libraries"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://xing312101.github.io/docs/technique/flutter/useful-libraries"><link data-rh="true" rel="alternate" href="https://xing312101.github.io/docs/technique/flutter/useful-libraries" hreflang="en"><link data-rh="true" rel="alternate" href="https://xing312101.github.io/docs/technique/flutter/useful-libraries" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Xing312101&#39;s Life Notes RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Xing312101&#39;s Life Notes Atom Feed"><link rel="stylesheet" href="/assets/css/styles.19a8bfa1.css">
+<script src="/assets/js/runtime~main.7399a080.js" defer="defer"></script>
+<script src="/assets/js/main.a0780274.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/xing_icon.svg" alt="Xing312101&#x27;s life" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/xing_icon.svg" alt="Xing312101&#x27;s life" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Xing312101&#x27;s life notes</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/technique/">Technique</a><a class="navbar__item navbar__link" href="/docs/english/">English</a><a class="navbar__item navbar__link" href="/docs/japanese/">Japanese</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/xing312101" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/">Notes</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/angular/">Angular</a><button aria-label="Expand sidebar category &#x27;Angular&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/angularjs/">AngularJS</a><button aria-label="Expand sidebar category &#x27;AngularJS&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/aws/">AWS</a><button aria-label="Expand sidebar category &#x27;AWS&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/bootstrap/">Bootstrap</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/cordova/">Cordova Webview</a><button aria-label="Expand sidebar category &#x27;Cordova Webview&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/css/">CSS</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/database_sql/">Database SQL</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/development_tools/">development tools</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/docker/">Docker</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/echarts_apache/">Echarts Apache</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/firebase/">Firebase</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/docs/technique/flutter/">Flutter</a><button aria-label="Collapse sidebar category &#x27;Flutter&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/barcode_scanner">barcode scanner</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/camera">Camera</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/connectivity">connectivity</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/crypto">crypto</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/cupertino_icons">cupertino_icons</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/dart">Dart</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/date_time_picker">date_time_picker</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/datetime_picker">DateTime Picker</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/dialog">Dialog</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/dio">dio</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/environment_value">environment value</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/environmentconfig">EnvironmentConfig</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/file">File</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/file_picker">file_picker</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_bloc">flutter_bloc</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_datetime_picker">flutter_datetime_picker</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_form_builder">flutter_form_builder</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_nfc_kit">flutter_nfc_kit</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_reactive_ble">flutter_reactive_ble</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_secure_storage">flutter_secure_storage</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_slidable">flutter_slidable</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutter_sound">flutter_sound</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/flutterfire">FlutterFire (Flutter + Firebase)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/get_device_info">get device info</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/http">http</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/http_api_methods">Http api methods</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/input">Input</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/intl">intl</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/issues">Issues</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/layout">layout</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/offlineapp">OfflineApp</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/package">Package</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/permission_handler">permission_handler</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/photo_view">photo_view</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/plugins">plugins</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/provider">Provider</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/qr_code_scanner">qr_code_scanner</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/realtime_database">Realtime Database</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/router">Router</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/sqflite">sqflite</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/start_coding">Start Coding</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/state_builder">state builder</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/tab">tab</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/test_code">test code</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/theme">theme</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/type">type</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/uncategory">uncategory</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/unit_test">Unit Test</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/technique/flutter/useful-libraries">useful-libraries</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/windows_offline">windows offline</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/technique/flutter/xcode">Xcode</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/git/">Git</a><button aria-label="Expand sidebar category &#x27;Git&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/gitbook/">Gitbook</a><button aria-label="Expand sidebar category &#x27;Gitbook&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/go_lang/">Go Lang</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/google_cloud/">Google Cloud</a><button aria-label="Expand sidebar category &#x27;Google Cloud&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/imageai/">ImageAI</a><button aria-label="Expand sidebar category &#x27;ImageAI&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/java/">Java</a><button aria-label="Expand sidebar category &#x27;Java&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/javascript/">Javascript</a><button aria-label="Expand sidebar category &#x27;Javascript&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/jquery/">JQuery</a><button aria-label="Expand sidebar category &#x27;JQuery&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/keras/">Keras</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/learning_webpage/">learning webpage</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/linux/">Linux</a><button aria-label="Expand sidebar category &#x27;Linux&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/mac/">Mac</a><button aria-label="Expand sidebar category &#x27;Mac&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/machine_learning/">Machine Learning</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/maximo/">Maximo</a><button aria-label="Expand sidebar category &#x27;Maximo&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/mysql/">MySQL</a><button aria-label="Expand sidebar category &#x27;MySQL&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/nodejs/">Node.Js</a><button aria-label="Expand sidebar category &#x27;Node.Js&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/opencv/">OpenCV</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/oracle/">Oracle</a><button aria-label="Expand sidebar category &#x27;Oracle&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/php/">PHP</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/power_bi/">Power BI</a><button aria-label="Expand sidebar category &#x27;Power BI&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/python/">Python</a><button aria-label="Expand sidebar category &#x27;Python&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/qt/">QT</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/raspberry_pi/">Raspberry Pi</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/react/">React</a><button aria-label="Expand sidebar category &#x27;React&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/react-native/">React-Native</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/redux/">Redux</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs/technique/ruby_on_rails/axlsx_rails">ruby_on_rails</a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/sql_server/">SQL Server</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/ssh/">SSH</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/swift/">Swift</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/system/">System</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/tensorflow/">TensorFlow</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/vuejs/">Vue.js</a><button aria-label="Expand sidebar category &#x27;Vue.js&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/weather_data_system/">weather data system</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/web_server/">Web Server</a><button aria-label="Expand sidebar category &#x27;Web Server&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/windows/">Windows</a><button aria-label="Expand sidebar category &#x27;Windows&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/technique/words/">Words</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/technique/zzz_waiting_research/">Waiting Research</a><button aria-label="Expand sidebar category &#x27;Waiting Research&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/technique/flutter/"><span itemprop="name">Flutter</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">useful-libraries</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>useful-libraries</h1>
+<blockquote>
+<p><a href="https://dart.dev/guides/libraries/useful-libraries" target="_blank" rel="noopener noreferrer">https://dart.dev/guides/libraries/useful-libraries</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="archive">archive<a class="hash-link" aria-label="Direct link to archive" title="Direct link to archive" href="/docs/technique/flutter/useful-libraries#archive">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/archive" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/archive</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="characters">characters<a class="hash-link" aria-label="Direct link to characters" title="Direct link to characters" href="/docs/technique/flutter/useful-libraries#characters">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/characters" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/characters</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intl">intl<a class="hash-link" aria-label="Direct link to intl" title="Direct link to intl" href="/docs/technique/flutter/useful-libraries#intl">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/intl" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/intl</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="logging">logging<a class="hash-link" aria-label="Direct link to logging" title="Direct link to logging" href="/docs/technique/flutter/useful-libraries#logging">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/logging" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/logging</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mockito">mockito<a class="hash-link" aria-label="Direct link to mockito" title="Direct link to mockito" href="/docs/technique/flutter/useful-libraries#mockito">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/mockito" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/mockito</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="path">path<a class="hash-link" aria-label="Direct link to path" title="Direct link to path" href="/docs/technique/flutter/useful-libraries#path">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/path" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/path</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="quiver">quiver<a class="hash-link" aria-label="Direct link to quiver" title="Direct link to quiver" href="/docs/technique/flutter/useful-libraries#quiver">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/quiver" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/quiver</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="shelf">shelf<a class="hash-link" aria-label="Direct link to shelf" title="Direct link to shelf" href="/docs/technique/flutter/useful-libraries#shelf">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/shelf" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/shelf</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="stack_trace">stack_trace<a class="hash-link" aria-label="Direct link to stack_trace" title="Direct link to stack_trace" href="/docs/technique/flutter/useful-libraries#stack_trace">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/stack_trace" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/stack_trace</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="stagehand">stagehand<a class="hash-link" aria-label="Direct link to stagehand" title="Direct link to stagehand" href="/docs/technique/flutter/useful-libraries#stagehand">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/stagehand" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/stagehand</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="test">test<a class="hash-link" aria-label="Direct link to test" title="Direct link to test" href="/docs/technique/flutter/useful-libraries#test">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/test" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/test</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="yaml">yaml<a class="hash-link" aria-label="Direct link to yaml" title="Direct link to yaml" href="/docs/technique/flutter/useful-libraries#yaml">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/yaml" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/yaml</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="async">async<a class="hash-link" aria-label="Direct link to async" title="Direct link to async" href="/docs/technique/flutter/useful-libraries#async">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/async" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/async</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="collection">collection<a class="hash-link" aria-label="Direct link to collection" title="Direct link to collection" href="/docs/technique/flutter/useful-libraries#collection">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/collection" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/collection</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="convert">convert<a class="hash-link" aria-label="Direct link to convert" title="Direct link to convert" href="/docs/technique/flutter/useful-libraries#convert">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/convert" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/convert</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="io">io<a class="hash-link" aria-label="Direct link to io" title="Direct link to io" href="/docs/technique/flutter/useful-libraries#io">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/io" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/io</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_staggered_animations">flutter_staggered_animations<a class="hash-link" aria-label="Direct link to flutter_staggered_animations" title="Direct link to flutter_staggered_animations" href="/docs/technique/flutter/useful-libraries#flutter_staggered_animations">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_staggered_animations" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_staggered_animations</a></p>
+</blockquote>
+<p>將交錯的動畫新增到您ListView，GridView，Column和Row</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_speed_dial">flutter_speed_dial<a class="hash-link" aria-label="Direct link to flutter_speed_dial" title="Direct link to flutter_speed_dial" href="/docs/technique/flutter/useful-libraries#flutter_speed_dial">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_speed_dial" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_speed_dial</a></p>
+</blockquote>
+<p>可展開選項的浮動按鈕.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="like_button">like_button<a class="hash-link" aria-label="Direct link to like_button" title="Direct link to like_button" href="/docs/technique/flutter/useful-libraries#like_button">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/like_button" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/like_button</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_slidable">flutter_slidable<a class="hash-link" aria-label="Direct link to flutter_slidable" title="Direct link to flutter_slidable" href="/docs/technique/flutter/useful-libraries#flutter_slidable">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_slidable" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_slidable</a></p>
+</blockquote>
+<p>可滑動列表按鈕選項，內置定向滑動刪除動作</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="percent_indicator">percent_indicator<a class="hash-link" aria-label="Direct link to percent_indicator" title="Direct link to percent_indicator" href="/docs/technique/flutter/useful-libraries#percent_indicator">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/percent_indicator" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/percent_indicator</a></p>
+</blockquote>
+<p>圓形和線形的進度條</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="curved_navigation_bar">curved_navigation_bar<a class="hash-link" aria-label="Direct link to curved_navigation_bar" title="Direct link to curved_navigation_bar" href="/docs/technique/flutter/useful-libraries#curved_navigation_bar">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/curved_navigation_bar" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/curved_navigation_bar</a></p>
+</blockquote>
+<p>動畫的底部tab欄</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="slide_up_panel">slide_up_panel<a class="hash-link" aria-label="Direct link to slide_up_panel" title="Direct link to slide_up_panel" href="/docs/technique/flutter/useful-libraries#slide_up_panel">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/sliding_up_panel" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/sliding_up_panel</a></p>
+</blockquote>
+<p>滑出而外內容</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="drag_list">drag_list<a class="hash-link" aria-label="Direct link to drag_list" title="Direct link to drag_list" href="/docs/technique/flutter/useful-libraries#drag_list">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/drag_list" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/drag_list</a></p>
+</blockquote>
+<p>拖動排序</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="animated_text_kit">animated_text_kit<a class="hash-link" aria-label="Direct link to animated_text_kit" title="Direct link to animated_text_kit" href="/docs/technique/flutter/useful-libraries#animated_text_kit">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/animated_text_kit" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/animated_text_kit</a></p>
+</blockquote>
+<p>文字動畫特效</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hidden_drawer_menu">hidden_drawer_menu<a class="hash-link" aria-label="Direct link to hidden_drawer_menu" title="Direct link to hidden_drawer_menu" href="/docs/technique/flutter/useful-libraries#hidden_drawer_menu">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/hidden_drawer_menu" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/hidden_drawer_menu</a></p>
+</blockquote>
+<p>it is now available as AnimatedDrawerContent</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_custom_clippers">flutter_custom_clippers<a class="hash-link" aria-label="Direct link to flutter_custom_clippers" title="Direct link to flutter_custom_clippers" href="/docs/technique/flutter/useful-libraries#flutter_custom_clippers">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_custom_clippers" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_custom_clippers</a></p>
+</blockquote>
+<p>將widget裁剪成各種形狀</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sticky_headers">sticky_headers<a class="hash-link" aria-label="Direct link to sticky_headers" title="Direct link to sticky_headers" href="/docs/technique/flutter/useful-libraries#sticky_headers">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/sticky_headers" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/sticky_headers</a></p>
+</blockquote>
+<p>持續保持item header</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="liquid_swipe">liquid_swipe<a class="hash-link" aria-label="Direct link to liquid_swipe" title="Direct link to liquid_swipe" href="/docs/technique/flutter/useful-libraries#liquid_swipe">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/liquid_swipe" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/liquid_swipe</a></p>
+</blockquote>
+<p>轉換頁面動畫</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="liquid_progress_indicator">liquid_progress_indicator<a class="hash-link" aria-label="Direct link to liquid_progress_indicator" title="Direct link to liquid_progress_indicator" href="/docs/technique/flutter/useful-libraries#liquid_progress_indicator">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/liquid_progress_indicator" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/liquid_progress_indicator</a></p>
+</blockquote>
+<p>進度條</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="passcode_screen">passcode_screen<a class="hash-link" aria-label="Direct link to passcode_screen" title="Direct link to passcode_screen" href="/docs/technique/flutter/useful-libraries#passcode_screen">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/passcode_screen" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/passcode_screen</a></p>
+</blockquote>
+<p>螢幕鎖</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="scratcher">scratcher<a class="hash-link" aria-label="Direct link to scratcher" title="Direct link to scratcher" href="/docs/technique/flutter/useful-libraries#scratcher">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/scratcher" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/scratcher</a></p>
+</blockquote>
+<p>刮刮樂</p>
+<h1>Networks</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dio">dio<a class="hash-link" aria-label="Direct link to dio" title="Direct link to dio" href="/docs/technique/flutter/useful-libraries#dio">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/dio" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/dio</a></p>
+</blockquote>
+<p>A powerful Http client for Dart</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="http">http<a class="hash-link" aria-label="Direct link to http" title="Direct link to http" href="/docs/technique/flutter/useful-libraries#http">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/http" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/http</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="connectivity">connectivity<a class="hash-link" aria-label="Direct link to connectivity" title="Direct link to connectivity" href="/docs/technique/flutter/useful-libraries#connectivity">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/connectivity" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/connectivity</a></p>
+</blockquote>
+<p>network status</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_spinkit">flutter_spinkit<a class="hash-link" aria-label="Direct link to flutter_spinkit" title="Direct link to flutter_spinkit" href="/docs/technique/flutter/useful-libraries#flutter_spinkit">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_spinkit" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_spinkit</a></p>
+</blockquote>
+<p>載入中的動畫</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_easyrefresh">flutter_easyrefresh<a class="hash-link" aria-label="Direct link to flutter_easyrefresh" title="Direct link to flutter_easyrefresh" href="/docs/technique/flutter/useful-libraries#flutter_easyrefresh">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_easyrefresh" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_easyrefresh</a></p>
+</blockquote>
+<p>refresh page</p>
+<h1>Json</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="json_annotation">json_annotation<a class="hash-link" aria-label="Direct link to json_annotation" title="Direct link to json_annotation" href="/docs/technique/flutter/useful-libraries#json_annotation">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/json_annotation" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/json_annotation</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="json_serializable">json_serializable<a class="hash-link" aria-label="Direct link to json_serializable" title="Direct link to json_serializable" href="/docs/technique/flutter/useful-libraries#json_serializable">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/json_serializable" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/json_serializable</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="build_runner">build_runner<a class="hash-link" aria-label="Direct link to build_runner" title="Direct link to build_runner" href="/docs/technique/flutter/useful-libraries#build_runner">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/build_runner" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/build_runner</a></p>
+</blockquote>
+<p>development only. Don&#x27;t set as release mode</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">dev_dependencies:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  build_runner:</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h1>Cache, Storage, Database</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="shared_preferences">shared_preferences<a class="hash-link" aria-label="Direct link to shared_preferences" title="Direct link to shared_preferences" href="/docs/technique/flutter/useful-libraries#shared_preferences">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/shared_preferences" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/shared_preferences</a></p>
+</blockquote>
+<p>local storage
+NSUserDefaults (on iOS) and SharedPreferences (on Android)</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sqflite">sqflite<a class="hash-link" aria-label="Direct link to sqflite" title="Direct link to sqflite" href="/docs/technique/flutter/useful-libraries#sqflite">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/sqflite" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/sqflite</a></p>
+</blockquote>
+<p>local database</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_cache_manager">flutter_cache_manager<a class="hash-link" aria-label="Direct link to flutter_cache_manager" title="Direct link to flutter_cache_manager" href="/docs/technique/flutter/useful-libraries#flutter_cache_manager">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_cache_manager" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_cache_manager</a></p>
+</blockquote>
+<p>file cache</p>
+<p>A CacheManager to download and cache files in the cache directory of the app. Various settings on how long to keep a file can be changed</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_secure_storage">flutter_secure_storage<a class="hash-link" aria-label="Direct link to flutter_secure_storage" title="Direct link to flutter_secure_storage" href="/docs/technique/flutter/useful-libraries#flutter_secure_storage">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_secure_storage" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_secure_storage</a></p>
+</blockquote>
+<ul>
+<li>Keychain is used for iOS</li>
+<li>AES encryption is used for Android. AES secret key is encrypted with RSA and RSA key is stored in KeyStore</li>
+</ul>
+<h1>Media</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="video_player">video_player<a class="hash-link" aria-label="Direct link to video_player" title="Direct link to video_player" href="/docs/technique/flutter/useful-libraries#video_player">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/video_player" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/video_player</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="chewie">chewie<a class="hash-link" aria-label="Direct link to chewie" title="Direct link to chewie" href="/docs/technique/flutter/useful-libraries#chewie">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/chewie" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/chewie</a>
+優化 video_player UI</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="audioplayers">audioplayers<a class="hash-link" aria-label="Direct link to audioplayers" title="Direct link to audioplayers" href="/docs/technique/flutter/useful-libraries#audioplayers">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/audioplayers" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/audioplayers</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fijkplayer">fijkplayer<a class="hash-link" aria-label="Direct link to fijkplayer" title="Direct link to fijkplayer" href="/docs/technique/flutter/useful-libraries#fijkplayer">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/fijkplayer" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/fijkplayer</a></p>
+</blockquote>
+<p>!! IOS don&#x27;t use this plugin</p>
+<h1>Image</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="image_picker">image_picker<a class="hash-link" aria-label="Direct link to image_picker" title="Direct link to image_picker" href="/docs/technique/flutter/useful-libraries#image_picker">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/image_picker" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/image_picker</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="image_crop">image_crop<a class="hash-link" aria-label="Direct link to image_crop" title="Direct link to image_crop" href="/docs/technique/flutter/useful-libraries#image_crop">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/image_crop" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/image_crop</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cached_network_image">cached_network_image<a class="hash-link" aria-label="Direct link to cached_network_image" title="Direct link to cached_network_image" href="/docs/technique/flutter/useful-libraries#cached_network_image">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/cached_network_image" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/cached_network_image</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="image-1">image<a class="hash-link" aria-label="Direct link to image" title="Direct link to image" href="/docs/technique/flutter/useful-libraries#image-1">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/image" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/image</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="qr_flutter">qr_flutter<a class="hash-link" aria-label="Direct link to qr_flutter" title="Direct link to qr_flutter" href="/docs/technique/flutter/useful-libraries#qr_flutter">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/qr_flutter" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/qr_flutter</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="heic_to_jpg">heic_to_jpg<a class="hash-link" aria-label="Direct link to heic_to_jpg" title="Direct link to heic_to_jpg" href="/docs/technique/flutter/useful-libraries#heic_to_jpg">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/heic_to_jpg" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/heic_to_jpg</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="image_gallery_saver">image_gallery_saver<a class="hash-link" aria-label="Direct link to image_gallery_saver" title="Direct link to image_gallery_saver" href="/docs/technique/flutter/useful-libraries#image_gallery_saver">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/image_gallery_saver" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/image_gallery_saver</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="photo_view">photo_view<a class="hash-link" aria-label="Direct link to photo_view" title="Direct link to photo_view" href="/docs/technique/flutter/useful-libraries#photo_view">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/photo_view" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/photo_view</a></p>
+</blockquote>
+<p>圖片預覽</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="cupertino_icons">cupertino_icons<a class="hash-link" aria-label="Direct link to cupertino_icons" title="Direct link to cupertino_icons" href="/docs/technique/flutter/useful-libraries#cupertino_icons">​</a></h2>
+<blockquote>
+<p><a href="https://xing312101.ddns.net/flutter/cupertino_icons.html" target="_blank" rel="noopener noreferrer">https://xing312101.ddns.net/flutter/cupertino_icons.html</a></p>
+</blockquote>
+<p>Icons</p>
+<h1>Status, event, listen data</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="event_bus">event_bus<a class="hash-link" aria-label="Direct link to event_bus" title="Direct link to event_bus" href="/docs/technique/flutter/useful-libraries#event_bus">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/event_bus" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/event_bus</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_redux">flutter_redux<a class="hash-link" aria-label="Direct link to flutter_redux" title="Direct link to flutter_redux" href="/docs/technique/flutter/useful-libraries#flutter_redux">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_redux" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_redux</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="scoped_model">scoped_model<a class="hash-link" aria-label="Direct link to scoped_model" title="Direct link to scoped_model" href="/docs/technique/flutter/useful-libraries#scoped_model">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/scoped_model" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/scoped_model</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="provider">provider<a class="hash-link" aria-label="Direct link to provider" title="Direct link to provider" href="/docs/technique/flutter/useful-libraries#provider">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/provider" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/provider</a></p>
+</blockquote>
+<p>Offical Plugin</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_bloc">flutter_bloc<a class="hash-link" aria-label="Direct link to flutter_bloc" title="Direct link to flutter_bloc" href="/docs/technique/flutter/useful-libraries#flutter_bloc">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_bloc" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_bloc</a></p>
+</blockquote>
+<h1>Message, Notification</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="firebase_messaging">firebase_messaging<a class="hash-link" aria-label="Direct link to firebase_messaging" title="Direct link to firebase_messaging" href="/docs/technique/flutter/useful-libraries#firebase_messaging">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/firebase_messaging" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/firebase_messaging</a></p>
+</blockquote>
+<p>dependency on firebase</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_local_notifications">flutter_local_notifications<a class="hash-link" aria-label="Direct link to flutter_local_notifications" title="Direct link to flutter_local_notifications" href="/docs/technique/flutter/useful-libraries#flutter_local_notifications">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_local_notifications" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_local_notifications</a></p>
+</blockquote>
+<h1>System control, permission, file, languange, i18n, Route</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="path_provider">path_provider<a class="hash-link" aria-label="Direct link to path_provider" title="Direct link to path_provider" href="/docs/technique/flutter/useful-libraries#path_provider">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/path_provider" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/path_provider</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="device_info">device_info<a class="hash-link" aria-label="Direct link to device_info" title="Direct link to device_info" href="/docs/technique/flutter/useful-libraries#device_info">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/device_info" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/device_info</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="permission_handler">permission_handler<a class="hash-link" aria-label="Direct link to permission_handler" title="Direct link to permission_handler" href="/docs/technique/flutter/useful-libraries#permission_handler">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/permission_handler" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/permission_handler</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="open_file">open_file<a class="hash-link" aria-label="Direct link to open_file" title="Direct link to open_file" href="/docs/technique/flutter/useful-libraries#open_file">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/open_file" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/open_file</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="url_launcher">url_launcher<a class="hash-link" aria-label="Direct link to url_launcher" title="Direct link to url_launcher" href="/docs/technique/flutter/useful-libraries#url_launcher">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/url_launcher" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/url_launcher</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="local_auth">local_auth<a class="hash-link" aria-label="Direct link to local_auth" title="Direct link to local_auth" href="/docs/technique/flutter/useful-libraries#local_auth">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/local_auth" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/local_auth</a></p>
+</blockquote>
+<p>支援指紋辨識</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="package_info">package_info<a class="hash-link" aria-label="Direct link to package_info" title="Direct link to package_info" href="/docs/technique/flutter/useful-libraries#package_info">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/package_info" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/package_info</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_i18n">flutter_i18n<a class="hash-link" aria-label="Direct link to flutter_i18n" title="Direct link to flutter_i18n" href="/docs/technique/flutter/useful-libraries#flutter_i18n">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_i18n" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_i18n</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fluro">fluro<a class="hash-link" aria-label="Direct link to fluro" title="Direct link to fluro" href="/docs/technique/flutter/useful-libraries#fluro">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/fluro" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/fluro</a></p>
+</blockquote>
+<p>Route</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="rxdart">rxdart<a class="hash-link" aria-label="Direct link to rxdart" title="Direct link to rxdart" href="/docs/technique/flutter/useful-libraries#rxdart">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/rxdart" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/rxdart</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="barcode_scan">barcode_scan<a class="hash-link" aria-label="Direct link to barcode_scan" title="Direct link to barcode_scan" href="/docs/technique/flutter/useful-libraries#barcode_scan">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/barcode_scan" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/barcode_scan</a></p>
+</blockquote>
+<h1>WebView</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_webview_plugin">flutter_webview_plugin<a class="hash-link" aria-label="Direct link to flutter_webview_plugin" title="Direct link to flutter_webview_plugin" href="/docs/technique/flutter/useful-libraries#flutter_webview_plugin">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_webview_plugin" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_webview_plugin</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="webview_flutter">webview_flutter<a class="hash-link" aria-label="Direct link to webview_flutter" title="Direct link to webview_flutter" href="/docs/technique/flutter/useful-libraries#webview_flutter">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/webview_flutter" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/webview_flutter</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_html">flutter_html<a class="hash-link" aria-label="Direct link to flutter_html" title="Direct link to flutter_html" href="/docs/technique/flutter/useful-libraries#flutter_html">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_html" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_html</a></p>
+</blockquote>
+<h1>Layout</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="carousel_slider">carousel_slider<a class="hash-link" aria-label="Direct link to carousel_slider" title="Direct link to carousel_slider" href="/docs/technique/flutter/useful-libraries#carousel_slider">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/carousel_slider" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/carousel_slider</a></p>
+</blockquote>
+<p>輪播圖</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_swiper">flutter_swiper<a class="hash-link" aria-label="Direct link to flutter_swiper" title="Direct link to flutter_swiper" href="/docs/technique/flutter/useful-libraries#flutter_swiper">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_swiper" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_swiper</a></p>
+</blockquote>
+<p>輪播圖</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fluttertoast">fluttertoast<a class="hash-link" aria-label="Direct link to fluttertoast" title="Direct link to fluttertoast" href="/docs/technique/flutter/useful-libraries#fluttertoast">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/fluttertoast" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/fluttertoast</a></p>
+</blockquote>
+<p>toast 提示</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bot_toast">bot_toast<a class="hash-link" aria-label="Direct link to bot_toast" title="Direct link to bot_toast" href="/docs/technique/flutter/useful-libraries#bot_toast">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/bot_toast" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/bot_toast</a></p>
+</blockquote>
+<p>toast 提示</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="smooth_star_rating">smooth_star_rating<a class="hash-link" aria-label="Direct link to smooth_star_rating" title="Direct link to smooth_star_rating" href="/docs/technique/flutter/useful-libraries#smooth_star_rating">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/smooth_star_rating" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/smooth_star_rating</a></p>
+</blockquote>
+<p>評分欄</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_rating_bar">flutter_rating_bar<a class="hash-link" aria-label="Direct link to flutter_rating_bar" title="Direct link to flutter_rating_bar" href="/docs/technique/flutter/useful-libraries#flutter_rating_bar">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_rating_bar" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_rating_bar</a></p>
+</blockquote>
+<p>評分欄</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fl_chart">fl_chart<a class="hash-link" aria-label="Direct link to fl_chart" title="Direct link to fl_chart" href="/docs/technique/flutter/useful-libraries#fl_chart">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/fl_chart" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/fl_chart</a></p>
+</blockquote>
+<p>圖表</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_circular_chart">flutter_circular_chart<a class="hash-link" aria-label="Direct link to flutter_circular_chart" title="Direct link to flutter_circular_chart" href="/docs/technique/flutter/useful-libraries#flutter_circular_chart">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_circular_chart" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_circular_chart</a></p>
+</blockquote>
+<p>圖表</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flushbar">flushbar<a class="hash-link" aria-label="Direct link to flushbar" title="Direct link to flushbar" href="/docs/technique/flutter/useful-libraries#flushbar">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flushbar" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flushbar</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_flip_view">flutter_flip_view<a class="hash-link" aria-label="Direct link to flutter_flip_view" title="Direct link to flutter_flip_view" href="/docs/technique/flutter/useful-libraries#flutter_flip_view">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_flip_view" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_flip_view</a></p>
+</blockquote>
+<p>翻轉卡片 翻轉畫面</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flip_card">flip_card<a class="hash-link" aria-label="Direct link to flip_card" title="Direct link to flip_card" href="/docs/technique/flutter/useful-libraries#flip_card">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flip_card" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flip_card</a></p>
+</blockquote>
+<p>翻轉卡片 翻轉畫面</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="gzx_dropdown_menu">gzx_dropdown_menu<a class="hash-link" aria-label="Direct link to gzx_dropdown_menu" title="Direct link to gzx_dropdown_menu" href="/docs/technique/flutter/useful-libraries#gzx_dropdown_menu">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/gzx_dropdown_menu" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/gzx_dropdown_menu</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="badges">badges<a class="hash-link" aria-label="Direct link to badges" title="Direct link to badges" href="/docs/technique/flutter/useful-libraries#badges">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/badges" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/badges</a></p>
+</blockquote>
+<p>消息圖標</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_datetime_picker">flutter_datetime_picker<a class="hash-link" aria-label="Direct link to flutter_datetime_picker" title="Direct link to flutter_datetime_picker" href="/docs/technique/flutter/useful-libraries#flutter_datetime_picker">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_datetime_picker" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_datetime_picker</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_cupertino_date_picker">flutter_cupertino_date_picker<a class="hash-link" aria-label="Direct link to flutter_cupertino_date_picker" title="Direct link to flutter_cupertino_date_picker" href="/docs/technique/flutter/useful-libraries#flutter_cupertino_date_picker">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_cupertino_date_picker" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_cupertino_date_picker</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="flutter_picker">flutter_picker<a class="hash-link" aria-label="Direct link to flutter_picker" title="Direct link to flutter_picker" href="/docs/technique/flutter/useful-libraries#flutter_picker">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/flutter_picker" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/flutter_picker</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="azlistview">azlistview<a class="hash-link" aria-label="Direct link to azlistview" title="Direct link to azlistview" href="/docs/technique/flutter/useful-libraries#azlistview">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/azlistview" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/azlistview</a></p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="extended_text">extended_text<a class="hash-link" aria-label="Direct link to extended_text" title="Direct link to extended_text" href="/docs/technique/flutter/useful-libraries#extended_text">​</a></h2>
+<blockquote>
+<p><a href="https://pub.dev/packages/extended_text" target="_blank" rel="noopener noreferrer">https://pub.dev/packages/extended_text</a></p>
+</blockquote></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/technique/flutter/unit_test"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Unit Test</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/technique/flutter/windows_offline"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">windows offline</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#archive">archive</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#characters">characters</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#intl">intl</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#logging">logging</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#mockito">mockito</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#path">path</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#quiver">quiver</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#shelf">shelf</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#stack_trace">stack_trace</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#stagehand">stagehand</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#test">test</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#yaml">yaml</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#async">async</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#collection">collection</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#convert">convert</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#io">io</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_staggered_animations">flutter_staggered_animations</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_speed_dial">flutter_speed_dial</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#like_button">like_button</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_slidable">flutter_slidable</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#percent_indicator">percent_indicator</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#curved_navigation_bar">curved_navigation_bar</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#slide_up_panel">slide_up_panel</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#drag_list">drag_list</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#animated_text_kit">animated_text_kit</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#hidden_drawer_menu">hidden_drawer_menu</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_custom_clippers">flutter_custom_clippers</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#sticky_headers">sticky_headers</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#liquid_swipe">liquid_swipe</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#liquid_progress_indicator">liquid_progress_indicator</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#passcode_screen">passcode_screen</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#scratcher">scratcher</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#dio">dio</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#http">http</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#connectivity">connectivity</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_spinkit">flutter_spinkit</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_easyrefresh">flutter_easyrefresh</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#json_annotation">json_annotation</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#json_serializable">json_serializable</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#build_runner">build_runner</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#shared_preferences">shared_preferences</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#sqflite">sqflite</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_cache_manager">flutter_cache_manager</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_secure_storage">flutter_secure_storage</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#video_player">video_player</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#chewie">chewie</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#audioplayers">audioplayers</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#fijkplayer">fijkplayer</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#image_picker">image_picker</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#image_crop">image_crop</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#cached_network_image">cached_network_image</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#image-1">image</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#qr_flutter">qr_flutter</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#heic_to_jpg">heic_to_jpg</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#image_gallery_saver">image_gallery_saver</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#photo_view">photo_view</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#cupertino_icons">cupertino_icons</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#event_bus">event_bus</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_redux">flutter_redux</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#scoped_model">scoped_model</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#provider">provider</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_bloc">flutter_bloc</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#firebase_messaging">firebase_messaging</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_local_notifications">flutter_local_notifications</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#path_provider">path_provider</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#device_info">device_info</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#permission_handler">permission_handler</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#open_file">open_file</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#url_launcher">url_launcher</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#local_auth">local_auth</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#package_info">package_info</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_i18n">flutter_i18n</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#fluro">fluro</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#rxdart">rxdart</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#barcode_scan">barcode_scan</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_webview_plugin">flutter_webview_plugin</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#webview_flutter">webview_flutter</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_html">flutter_html</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#carousel_slider">carousel_slider</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_swiper">flutter_swiper</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#fluttertoast">fluttertoast</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#bot_toast">bot_toast</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#smooth_star_rating">smooth_star_rating</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_rating_bar">flutter_rating_bar</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#fl_chart">fl_chart</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_circular_chart">flutter_circular_chart</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flushbar">flushbar</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_flip_view">flutter_flip_view</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flip_card">flip_card</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#gzx_dropdown_menu">gzx_dropdown_menu</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#badges">badges</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_datetime_picker">flutter_datetime_picker</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_cupertino_date_picker">flutter_cupertino_date_picker</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#flutter_picker">flutter_picker</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#azlistview">azlistview</a></li><li><a class="table-of-contents__link toc-highlight" href="/docs/technique/flutter/useful-libraries#extended_text">extended_text</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Life</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/">Blog</a></li><li class="footer__item"><a href="https://github.com/xing312101" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a class="footer__link-item" href="/tags">Tags</a></li></ul></div><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/technique">Technique</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/english">English</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/japanese">Japanese</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2020-2024 Xing312101, https://github.com/xing312101</div></div></div></footer></div>
+</body>
+</html>
