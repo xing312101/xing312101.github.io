@@ -1,5 +1,20 @@
 # SSH
 
+
+## github 
+```
+ssh-keygen -t ed25519 -C "xing312101@gmail.com"
+
+pbcopy sshKey.pub to the server
+
+$ vim config
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/sshKey.pub
+```
+
+## general
 ```
 ssh-keygen -m PEM -t rsa -b 4096
 
