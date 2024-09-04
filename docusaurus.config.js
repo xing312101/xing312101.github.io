@@ -98,8 +98,16 @@ const config = {
           },
           {
             href: 'https://github.com/xing312101',
-            label: 'GitHub',
+            // label: 'GitHub',
             position: 'right',
+            className: "header-github-link",
+          },
+          {
+            href: 'https://www.instagram.com/xing312101/?utm_source=qr',
+            // label: 'Instagram',
+            position: 'right',
+            className: "header-ig-link",
+            
           },
         ],
       },
@@ -116,6 +124,10 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/xing312101',
+              },
+              {
+                label: 'Instagram',
+                href: 'https://www.instagram.com/xing312101/?utm_source=qr',
               },
               {
                 label: 'Tags',
@@ -157,6 +169,14 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+    // stylesheets: [
+    //   // String format.
+    //   'https://docusaurus.io/style.css',
+    //   // Object format.
+    //   {
+    //     href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+    //   },
+    // ],
 };
 
 export default config;
