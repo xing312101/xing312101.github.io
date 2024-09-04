@@ -2,11 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xing312101.github.io/</id>
     <title>Xing312101's Life Notes Blog</title>
-    <updated>2024-04-01T00:00:00.000Z</updated>
+    <updated>2024-04-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xing312101.github.io/"/>
     <subtitle>Xing312101's Life Notes Blog</subtitle>
     <icon>https://xing312101.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[2024-04-05 go around in vancouver downtown]]></title>
+        <id>https://xing312101.github.io/vancouver-canada-place-20240405</id>
+        <link href="https://xing312101.github.io/vancouver-canada-place-20240405"/>
+        <updated>2024-04-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[I went around in downtown today. The first point was Gastown Steam Clock. I didn't see the steam because it was maintaining.]]></summary>
+        <content type="html"><![CDATA[<p>I went around in downtown today. The first point was Gastown Steam Clock. I didn't see the steam because it was maintaining.
+<img decoding="async" loading="lazy" alt="alt text" src="https://xing312101.github.io/assets/images/20240405_clock2-955720cf6b3539cc100c110a3d4550d1.jpeg" title="20240405_clock2" width="4032" height="3024" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="alt text" src="https://xing312101.github.io/assets/images/20240405_clock-c368e394a3be0068e83c0c505bd73ddc.jpeg" title="20240405_clock" width="4032" height="3024" class="img_ev3q"></p>
+<p>I also went to Canada Place. I saw the seaplanes first time. I thought I will come here often, and it is actually happening.</p>
+<p><img decoding="async" loading="lazy" alt="alt text" src="https://xing312101.github.io/assets/images/20240405_canada_place-d62c75bceb36a86621a330a7be7ffcde.jpeg" title="20240405_canada_place" width="4032" height="3024" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="alt text" src="https://xing312101.github.io/assets/images/20240405_canada_place2-6e9ce1d7780c9498698661f42a4fd113.jpeg" title="20240405_canada_place2" width="4032" height="3024" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="alt text" src="https://xing312101.github.io/assets/images/20240405_canada_place3-5c624c1f4de71741bbface4237c35ccf.jpeg" title="20240405_canada_place3" width="4032" height="3024" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>Xing312101</name>
+            <uri>https://xing312101.github.io</uri>
+        </author>
+        <category label="Canada" term="Canada"/>
+        <category label="Vancouver" term="Vancouver"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2024-04 Cherry Blossom in Vancouver]]></title>
         <id>https://xing312101.github.io/vancouver-cherry-blossom-2024</id>
