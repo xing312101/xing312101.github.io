@@ -14,10 +14,19 @@ brew install openssl readline sqlite3 xz zlib
 
 brew update
 brew install pyenv
+```
+### Add to .zshrc
+```
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
 
-## for .zsh shell, Make sure that your terminal app runs the shell as a login shell.
-echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+plugin=(
+  pyenv
+)
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 ```
 
 ## Basic GitHub Checkout
