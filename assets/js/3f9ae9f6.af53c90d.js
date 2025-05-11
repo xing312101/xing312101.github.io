@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxing_life_3=self.webpackChunkxing_life_3||[]).push([[3032],{8322:i=>{i.exports=JSON.parse('{"authors":[{"name":"Xing312101","title":"Xing312101\'s supervisor","url":"https://xing312101.github.io","imageURL":"/img/xing_icon.png","key":"xing312101","page":null,"count":3}]}')}}]);
