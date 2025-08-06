@@ -19,3 +19,12 @@ isinstance(bmi, (float, int))
 
 bmi_str =  f"{bmi:6.2f}" if isinstance(bmi, (float, int)) else f"{bmi:>6}"
 ```
+
+## run commnad 
+程式碼加上 ! 就會跑command 指令
+```
+!nvidia-smi
+```
+
+## different in (1) and (1,)
+要注意（1) 只是個數字 跟 (1,)不一樣， (1,) 是個tuple 

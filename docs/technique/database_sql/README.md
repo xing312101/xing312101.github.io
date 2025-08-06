@@ -1,4 +1,42 @@
-# Database SQL
+# Database、SQL
+
+## DBeaver
+> https://dbeaver.io/
+
+## windows function
+```
+ROW_NUMBER() OVER (ORDER BY joindate) — 排名或排序用
+SUM(amount) OVER (PARTITION BY customer_id ORDER BY date) — 累積加總
+AVG(score) OVER (PARTITION BY class) — 平均數計算（分組）
+COUNT(*) OVER () - 計數全部數量
+
+# 列出名字同時每筆資料都附上users的數量
+SELECT COUNT(*) OVER() as total, users.name
+FROM users
+# 找出合計最高的一筆
+select facid, total 
+from (
+    select facid,
+    sum(slots) as total,
+    rank() over (order by sum(slots)desc) rank
+    from cd.bookings
+    group by facid
+) 
+where rank = 1
+
+#
+select 
+    m.firstname,
+    m.surname,
+    round(sum(b.slots) * 0.5, -1) as hours,
+    rank() over(order by round(sum(b.slots) * 0.5, -1) desc) as rank
+from cd.members m
+inner join cd.bookings b on m.memid = b.memid
+group by m.memid
+order by rank, m.surname, m.firstname;
+
+```
+
 ## sql select 串接 concat
 ```
 MySQL: CONCAT( )

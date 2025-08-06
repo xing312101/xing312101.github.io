@@ -3,12 +3,27 @@
 > https://philipzheng.gitbook.io/docker_practice/
 
 
+## 安全性
+> https://hackmd.io/@blueskyson/docker-security
+
+## install
+> https://docs.docker.com/desktop/setup/install/mac-install/
+```
+1. install by dmg file
+download dmg from https://docs.docker.com/desktop/setup/install
+2. install by brew
+$ brew install --cask docker
+```
+
+
+## commands
 ```
 list containers
-$ sudo docker container ls
+$ docker ps -a
+$ docker container ls
 
 enter container
-$ sudo docker exec -it containerId bash
+$ docker exec -it containerId bash
 ```
 
 

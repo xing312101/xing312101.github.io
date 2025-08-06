@@ -80,4 +80,3 @@ $ pyenv virtualenv 3.6.8 projectName
 $ pyenv local projectName
 $ python -V
 ```
-
