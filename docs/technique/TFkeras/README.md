@@ -10,6 +10,14 @@ keras vs pytorch
 ## kaggle
 學習參考
 
+## overfit, underfit
+overfitting -> 死背
+把雜訊都記下了，導致辨識太吹毛求疵
+
+underfitting -> 健忘
+辨識率不夠
+
+
 ## 資料行列
 ```
 x = tf.constant([[1, 2, 3, 4, 5, 6]])

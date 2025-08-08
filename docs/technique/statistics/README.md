@@ -37,6 +37,14 @@ n=10, n=500 ，樣本數越多越接近真實狀況
 ## 區間估計
 先考慮母體分佈，假設這個分佈為常態分佈
 
-##
+## 標準誤差 SE = standard error
+(不偏變異數/樣本數)開根號
 
+
+## simulating sampling distributions
+> https://www.stapplet.com/sampdist.html
+
+
+significance level: alpha : (1 - significance level)
+confidence level: 95%, 99% 信賴指數 : (1 - alpha)
 
