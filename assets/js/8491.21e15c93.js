@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxing_life_3=self.webpackChunkxing_life_3||[]).push([[8491],{28491:(e,c,i)=>{i.d(c,{createPacketServices:()=>s.$});var s=i(39773);i(51400)}}]);

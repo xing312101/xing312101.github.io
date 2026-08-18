@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxing_life_3=self.webpackChunkxing_life_3||[]).push([[8391],{28391:(e,i,s)=>{s.d(i,{createInfoServices:()=>c.v});var c=s(6491);s(51400)}}]);
