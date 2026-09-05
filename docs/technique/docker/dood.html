@@ -14,7 +14,7 @@
 <meta name="google-adsense-account" content="ca-pub-6485949540974275">
 <script async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-6485949540974275" crossorigin="anonymous"></script>
 <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6485949540974275" async data-ad-client="ca-pub-6485949540974275"></script><link rel="stylesheet" href="/assets/css/styles.b5263b39.css">
-<script src="/assets/js/runtime~main.ca71877c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.95134ed0.js" defer="defer"></script>
 <script src="/assets/js/main.522dd0bf.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -169,7 +169,7 @@ CetusGuard）：一旦放行 <code>POST /containers/create</code>，就擋不住
 <li><strong>會檢查 body、也會過濾回應的代理</strong>：bind 來源白名單、禁特權旗標、新建物件蓋租戶標籤、
 list 端點依標籤過濾 → 別的專案在容器眼中<strong>真的看不到</strong>。現成的沒有（唯一做過的
 sockguard 已於 2021 封存），但自己寫不大（Go 標準庫、約 1200 行含測試）——
-規則表、實作要點與踩過的坑見〈<a href="/docs/technique/docker/sandbox_dood_proxy">DooD 的沙箱</a>〉。</li>
+規則表、怎麼設定範圍、實作要點與踩過的坑見〈<a href="/docs/technique/docker/sandbox_dood_proxy">DooD 的沙箱</a>〉。</li>
 </ul>
 </li>
 <li><strong>真隔離＝每專案一顆 daemon</strong>：Linux 用 rootless dockerd（每專案一個 socket）；
