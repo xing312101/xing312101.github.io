@@ -1,1 +1,0 @@
-(self.webpackChunkxing_life_3=self.webpackChunkxing_life_3||[]).push([[5741],{45741:()=>{}}]);
