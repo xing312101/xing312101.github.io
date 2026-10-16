@@ -14,8 +14,8 @@
 <meta name="google-adsense-account" content="ca-pub-6485949540974275">
 <script async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-6485949540974275" crossorigin="anonymous"></script>
 <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6485949540974275" async data-ad-client="ca-pub-6485949540974275"></script><link rel="stylesheet" href="/assets/css/styles.0b84a498.css">
-<script src="/assets/js/runtime~main.41981680.js" defer="defer"></script>
-<script src="/assets/js/main.f2bdc4df.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.501b6829.js" defer="defer"></script>
+<script src="/assets/js/main.daf4fe6f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -52,6 +52,8 @@
 <table><thead><tr><th>Stage</th><th>Job</th><th>觸發</th><th>要祕密?</th><th>要裝置?</th></tr></thead><tbody><tr><td>verify</td><td><code>analyze</code>、<code>test</code></td><td>每次 push/MR</td><td>❌</td><td>❌</td></tr><tr><td>build</td><td><code>ios_build</code>（<code>--no-codesign</code>）、<code>android_build</code></td><td>MR / 主分支</td><td>❌</td><td>❌</td></tr><tr><td>e2e</td><td><code>integration_test</code>（模擬器）</td><td>手動 / nightly</td><td>❌*</td><td>✅</td></tr><tr><td>release</td><td><code>ios_release</code>、<code>android_release</code></td><td>release tag</td><td>✅</td><td>❌</td></tr></tbody></table>
 <p>* e2e 若走「登入真後端」，帳密建議鎖一個可拋棄的沙箱帳號、寫死在測試 harness，就不必進祕密。</p>
 <p><strong>關鍵</strong>：只有快檢是 always-on 的雲端，才適合當 MR 的必過條件。所有 build/release 都用 tag + 手動，不會因為你的 Mac 沒開機而卡住 MR。</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>額度不夠、快檢改跑自架 Mac 時</div><div class="admonitionContent_BuS1"><p>這條原則就被刻意放棄了：merge gate 會綁在那台 Mac 上。寫法（兩支 job＋旗標，改一行切回雲端）與代價見
+<a href="/docs/technique/pg_languages/mobile/flutter-cicd/fast-checks">快檢 → 額度不夠：快檢改跑自架 Mac</a>。</p></div></div>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="三個-flutter-專屬的地雷先知道各節細講">三個 Flutter 專屬的地雷（先知道，各節細講）<a href="#三個-flutter-專屬的地雷先知道各節細講" class="hash-link" aria-label="Direct link to 三個 Flutter 專屬的地雷（先知道，各節細講）" title="Direct link to 三個 Flutter 專屬的地雷（先知道，各節細講）">​</a></h2>
 <ol>
@@ -60,7 +62,7 @@
 <li><strong>e2e 需要裝置、又慢、又常打真後端</strong>。別讓它進 merge gate（會被自架機器有沒有開機、模擬器狀態拖累）。用<strong>手動</strong>或 <strong>nightly schedule</strong>。詳見 <a href="/docs/technique/pg_languages/mobile/flutter-cicd/device-testing">裝置測試</a>。</li>
 </ol>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="github--gitlab-名詞對照速查">GitHub ↔ GitLab 名詞對照（速查）<a href="#github--gitlab-名詞對照速查" class="hash-link" aria-label="Direct link to GitHub ↔ GitLab 名詞對照（速查）" title="Direct link to GitHub ↔ GitLab 名詞對照（速查）">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="github--gitlab-名詞對照速查">GitHub ↔ GitLab 名詞對照（速查）<a href="#github--gitlab-名詞對照速查" class="hash-link" aria-label="Direct link to GitHub ↔ GitLab 名詞對 照（速查）" title="Direct link to GitHub ↔ GitLab 名詞對照（速查）">​</a></h2>
 <p>後面各節會並列兩種語法，先記這張對照表：</p>
 <table><thead><tr><th>概念</th><th>GitLab CI/CD</th><th>GitHub Actions</th></tr></thead><tbody><tr><td>設定檔</td><td><code>.gitlab-ci.yml</code>（單一檔）</td><td><code>.github/workflows/*.yml</code>（可多檔）</td></tr><tr><td>執行單位</td><td>job（歸在 stage）</td><td>job（歸在 workflow，可設 <code>needs</code> 排序）</td></tr><tr><td>觸發</td><td><code>workflow:</code> / <code>rules:</code></td><td><code>on:</code>（<code>push</code> / <code>pull_request</code> / <code>tags</code>…）</td></tr><tr><td>只在某條件跑</td><td><code>rules: - if: …</code></td><td><code>on:</code> + <code>if:</code>（job/step 層級）</td></tr><tr><td>hosted 機器</td><td><code>image:</code>（Linux）；<strong>無免費 macOS</strong></td><td><code>runs-on: ubuntu-latest</code> / <strong><code>macos-14</code></strong></td></tr><tr><td>自架機器</td><td><code>tags: [...]</code> 指名</td><td><code>runs-on: [self-hosted, macOS]</code></td></tr><tr><td>機密</td><td>Settings → CI/CD → <strong>Variables</strong>（Masked/Protected/File）</td><td>Settings → Secrets and variables → <strong>Actions secrets</strong></td></tr><tr><td>只給受保護 ref</td><td>變數勾 <strong>Protected</strong> + Protected branches/tags</td><td><strong>Environments</strong> + required reviewers</td></tr><tr><td>手動關卡</td><td>job <code>when: manual</code>（+ <code>allow_failure</code>）</td><td><strong>Environments</strong> 的 required reviewers</td></tr><tr><td>產物</td><td><code>artifacts:</code></td><td><code>actions/upload-artifact</code></td></tr><tr><td>快取</td><td><code>cache:</code></td><td><code>actions/cache</code>（或 setup 動作內建）</td></tr></tbody></table>
 <hr>
