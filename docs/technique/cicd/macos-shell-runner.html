@@ -14,8 +14,8 @@
 <meta name="google-adsense-account" content="ca-pub-6485949540974275">
 <script async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-6485949540974275" crossorigin="anonymous"></script>
 <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6485949540974275" async data-ad-client="ca-pub-6485949540974275"></script><link rel="stylesheet" href="/assets/css/styles.0b84a498.css">
-<script src="/assets/js/runtime~main.e1712251.js" defer="defer"></script>
-<script src="/assets/js/main.6af9cf70.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.dd89bbf6.js" defer="defer"></script>
+<script src="/assets/js/main.97730d41.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -89,7 +89,7 @@ runner、或把 <code>concurrent</code> 調大，新目錄就不在清單上，�
 <div class="theme-admonition theme-admonition-danger admonition_xJq3 alert alert--danger"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>這個 hook 有三種寫法會壞，而且壞得很不明顯</div><div class="admonitionContent_BuS1"><p><strong>① 用相對路徑 → 靜默 no-op。</strong> <code>pre_get_sources_script</code> 在 <strong>clone 之前</strong>執行，<strong>實測 cwd 是 <code>/</code></strong>
 （不是專案目錄，專案目錄那時可能還不存在）。所以 <code>rm -rf build</code> 是對著 <code>/build</code> 執行，而 <code>-f</code> 讓
 「路徑不存在」<strong>靜默回傳 0</strong> —— hook 看起來成功、實際什麼都沒清。要確認自己這台是什麼情況，
-在 hook 裡加一行 <code>pwd</code>，log 會直接告訴你。</p><p><strong>② 把錯誤吞掉 → 永遠不會浮現。</strong> <code>rm -rf build 2&gt;/dev/null … ; true</code> 連結束碼都丟了。</p><p><strong>③ 用 <code>cd</code> 或 <code>exit 0</code> → 會把 clone 整個跳掉。</strong> 這段 script 是<strong>內嵌</strong>進 runner 產生的同一支
+在 hook 裡加一行 <code>pwd</code>，job log 會直接告訴你。</p><p><strong>② 把錯誤吞掉 → 永遠不會浮現。</strong> <code>rm -rf build 2&gt;/dev/null … ; true</code> 連結束碼都丟了。</p><p><strong>③ 用 <code>cd</code> 或 <code>exit 0</code> → 會把 clone 整個跳掉。</strong> 這段 script 是<strong>內嵌</strong>進 runner 產生的同一支
 bash 腳本，後面才接 clone 的邏輯。所以：</p><ul>
 <li>
 <p><code>cd &quot;$CI_PROJECT_DIR&quot; || exit 0</code> 看起來像「目錄不存在就跳過清理」，實際是<strong>終止整支腳本</strong>，
@@ -101,7 +101,7 @@ clone 根本不執行。症狀：<code>get_sources</code> 只花不到一秒、<
 </li>
 </ul><p><strong>結論：只用絕對路徑、不動 cwd、不要提早 <code>exit 0</code>。</strong> 專案目錄還不存在時（雲端容器每次全新），
 <code>rm</code> 對不存在的絕對路徑就是 no-op、<code>[ -e ]</code> 也是 false，自然往下走去 clone，不必特別處理。
-結尾的 <code>exit 1</code> 則要保留——那是「清不掉就當場紅」的刻意行為。</p><p>①②的共同症狀是<strong>騙人的成功</strong>：hook 那段 log 乾乾淨淨，job 卻在幾秒後的 <code>git clean</code> 以
+結尾的 <code>exit 1</code> 則要保留——那是「清不掉就當場紅」的刻意行為。</p><p>①②的共同症狀是<strong>騙人的成功</strong>：job log 裡 hook 那段乾乾淨淨，job 卻在幾秒後的 <code>git clean</code> 以
 <code>Directory not empty</code> 失敗，看起來像 git 的問題而不是 hook 的問題。</p></div></div>
 </li>
 </ol>

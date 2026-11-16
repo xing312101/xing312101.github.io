@@ -14,8 +14,8 @@
 <meta name="google-adsense-account" content="ca-pub-6485949540974275">
 <script async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-6485949540974275" crossorigin="anonymous"></script>
 <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6485949540974275" async data-ad-client="ca-pub-6485949540974275"></script><link rel="stylesheet" href="/assets/css/styles.0b84a498.css">
-<script src="/assets/js/runtime~main.e1712251.js" defer="defer"></script>
-<script src="/assets/js/main.6af9cf70.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.dd89bbf6.js" defer="defer"></script>
+<script src="/assets/js/main.97730d41.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -87,7 +87,7 @@ Linux 上 <code>systemctl stop gitlab-runner</code> 預設送的是 <code>SIGTER
 <li>自架的 GitLab 版本比較舊時，可能還沒有這幾個新的值，CI 檔會驗證失敗 —— 那時候用 <code>stuck_or_timeout_failure</code></li>
 <li><code>stuck_pending_*</code> 不建議列：沒有 runner 在線時重排一次，只是再等一個小時、再失敗一次</li>
 <li><strong>只有「做到一半、從頭再做一次也沒關係」的 job 才能自動重跑</strong>。部署要先設計成可以重跑，見<a href="/docs/technique/cicd/deploy-repo">用 deploy repo 部署 → 切換在主機上自己跑</a></li>
-<li>實際發生過：傍晚那台 Windows 被關機時，一條部署的 pipeline 正在跑端對端測試。runner 的 log 停在關機那一刻，沒有任何「收到停止訊號」的紀錄 ——
+<li>實際發生過：傍晚那台 Windows 被關機時，一條部署的 pipeline 正在跑端對端測試。runner 自己的 log（Windows 在事件檢視器，見<a href="/docs/technique/cicd/self-hosted-runner#runner-logs">runner 自己的 log 在哪</a>）停在關機那一刻，沒有任何「收到停止訊號」的紀錄 ——
 也就是沒有機會回報，只能等 30 分鐘後判 <code>no_updates_running</code>；備援的 Mac 那晚在睡，到隔天早上都沒有接到任何 job，重跑的那一個也沒有人接</li>
 </ul>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>晚上兩台都不在：job 不會乖乖排到隔天</div><div class="admonitionContent_BuS1"><p>能接的 runner 都超過 2 小時沒連上 GitLab 之後，排隊超過 1 小時的 job 會被判失敗（pipeline 變紅）；列了 <code>stuck_or_timeout_failure</code> 的話會再排一次，再過一小時又失敗。
