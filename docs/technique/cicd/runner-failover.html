@@ -14,8 +14,8 @@
 <meta name="google-adsense-account" content="ca-pub-6485949540974275">
 <script async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" data-ad-client="ca-pub-6485949540974275" crossorigin="anonymous"></script>
 <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6485949540974275" async data-ad-client="ca-pub-6485949540974275"></script><link rel="stylesheet" href="/assets/css/styles.0b84a498.css">
-<script src="/assets/js/runtime~main.dd89bbf6.js" defer="defer"></script>
-<script src="/assets/js/main.97730d41.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e0412035.js" defer="defer"></script>
+<script src="/assets/js/main.96f2a31b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -86,6 +86,11 @@ Linux 上 <code>systemctl stop gitlab-runner</code> 預設送的是 <code>SIGTER
 <strong>它對不上 <code>runner_interrupted</code></strong> —— 只列了舊名字和 <code>runner_system_failure</code> 的話，機器正常關機時中斷的 job 不會自動重跑</li>
 <li>自架的 GitLab 版本比較舊時，可能還沒有這幾個新的值，CI 檔會驗證失敗 —— 那時候用 <code>stuck_or_timeout_failure</code></li>
 <li><code>stuck_pending_*</code> 不建議列：沒有 runner 在線時重排一次，只是再等一個小時、再失敗一次</li>
+<li><strong>拉程式碼失敗不在上面任何一個裡</strong>：runner 好好的，只是那幾秒連不上 GitLab（<code>Failed to connect to gitlab.com:443</code>、<code>exit code 128</code>），
+GitLab 把它算成 <code>script_failure</code> —— 跟測試失敗同一類，<code>retry</code> 不會重跑，只能手動 Retry。
+實際遇過兩次，都是早上、同一時間好幾個 job 一起失敗（runner 所在的機器剛開機十幾分鐘）。改用 runner 內建的重試，只重試拉程式碼那一步：<!-- -->
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token key atrule" style="color:#00a4db">variables</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">GET_SOURCES_ATTEMPTS</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3</span><span class="token plain">   </span><span class="token comment" style="color:#999988;font-style:italic"># 拉程式碼失敗時再試，最多 3 次；測試本身失敗不受影響</span><br></span></code></pre></div></div>
+<!-- -->不要為了它把 <code>script_failure</code> 加進 <code>retry</code>：那會連測試真的紅了也重跑一次</li>
 <li><strong>只有「做到一半、從頭再做一次也沒關係」的 job 才能自動重跑</strong>。部署要先設計成可以重跑，見<a href="/docs/technique/cicd/deploy-repo">用 deploy repo 部署 → 切換在主機上自己跑</a></li>
 <li>實際發生過：傍晚那台 Windows 被關機時，一條部署的 pipeline 正在跑端對端測試。runner 自己的 log（Windows 在事件檢視器，見<a href="/docs/technique/cicd/self-hosted-runner#runner-logs">runner 自己的 log 在哪</a>）停在關機那一刻，沒有任何「收到停止訊號」的紀錄 ——
 也就是沒有機會回報，只能等 30 分鐘後判 <code>no_updates_running</code>；備援的 Mac 那晚在睡，到隔天早上都沒有接到任何 job，重跑的那一個也沒有人接</li>
